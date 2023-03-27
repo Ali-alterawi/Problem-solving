@@ -15,11 +15,11 @@
 
 // q2
 // failed attempt
-// let i = "123456";
+// let i = "ABCD";
 // function reverse(i) {
 //     return i ? reverse(i.substr(1)) + i[0] : i;
 // }
-// console.log(i);
+// console.log(reverse(i));
 
 
 // drobii 
