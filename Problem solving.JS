@@ -74,3 +74,45 @@
 // }
 
 // console.log(revers(str)); 
+
+
+//  Q1 DATA Structure ------------------------ 3 April 2023
+
+// const stack = [];
+// const minStack = [];
+
+// function myPush(num){
+//     stack.push(num);
+//     if (minStack.length === 0 || num <= minStack[minStack.length - 1]) {
+//         minStack.push(num);
+//     }
+// }
+// function getMin(){
+//     return minStack[minStack.length - 1];
+// }
+
+// myPush(1);
+// myPush(2);
+// myPush(3);
+// myPush(4);
+// myPush(5);
+// console.log(getMin());
+
+// Q2
+// let queue = [1, 2, 3, 4, 5];
+
+
+
+// function reverseQueue(queue) {
+//     let stack = [];
+//     while (queue.length > 0) {
+//         stack.push(queue.shift());
+//     }
+//     while (stack.length > 0) {
+//         queue.push(stack.pop());
+//     }
+//     return queue;
+// }
+
+// console.log(reverseQueue(queue));
+
