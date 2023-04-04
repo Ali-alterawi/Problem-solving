@@ -65,44 +65,96 @@
 //----------------------------//
 //--------------    Q   2   ---------------//
 
-class ListNode {
-    constructor(data) {
-        this.data = data;
+// class ListNode {
+//     constructor(data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+
+// }
+
+// class LinkedList {
+//     constructor(head = null) {
+//         this.head = head;
+//     }
+
+
+
+//     reverse(node1) {
+//         var prev = null;
+//         var current = node1;
+//         var next = null;
+//         while (current != null) {
+//             next = current.next;
+//             current.next = prev;
+//             prev = current;
+//             current = next;
+//         }
+//         node1 = prev;
+//         return node1;
+//     }
+// }
+// let node1 = new LinkedList(1);
+// let node2 = new LinkedList(2);
+// let node3 = new LinkedList(3);
+
+// node1.next = node2;
+// node2.next = node3;
+
+// let list = new LinkedList(node1);
+
+// console.log(list);
+
+// console.log(list.reverse(node1));
+
+
+
+
+////////////////////////////////
+/////another way of solving/////
+//////////////Q2////////////////
+
+let head;
+class Node {
+    constructor(value) {
+        this.value = value;
         this.next = null;
+}}
+function reverse(node){ 
+    let prev = null;
+    let current = node;
+    let next = null;
+    while(current!= null){ // حلقة مفرغةحتى نصل الى null
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
     }
-
+    node = prev;
+    return node;
 }
 
-class LinkedList {
-    constructor(head = null) {
-        this.head = head;
-    }
+function print(node) {
+    while (node!= null) {
+        console.log(node.value);
+        node = node.next;
+    }}
+//         document.write(node.value + " ");
+//         node = node.next;
+//     }
+// }
 
+head = new Node(5);
 
+head.next = new Node(15);
 
-    reverse(node1) {
-        var prev = null;
-        var current = node1;
-        var next = null;
-        while (current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-        node1 = prev;
-        return node1;
-    }
-}
-let node1 = new LinkedList(1);
-let node2 = new LinkedList(2);
-let node3 = new LinkedList(3);
+head.next.next = new Node(25);
 
-node1.next = node2;
-node2.next = node3;
+head.next.next.next = new Node(35);
 
-let list = new LinkedList(node1);
-
-console.log(list);
-
-console.log(list.reverse(node1));
+    document.write("Given linked list<br/>");
+    print(head);
+    head = reverse(head);
+    document.write("<br/>");
+    document.write("Reversed linked list<br/> ");
+    print(head);
