@@ -98,7 +98,9 @@
 // myPush(5);
 // console.log(getMin());
 
-// Q2// S = [1, 2, 3, 4, 5] ==> [5,4,3,2,1]
+// Q2
+
+// S = [1, 2, 3, 4, 5] ==> [5,4,3,2,1]
 // let q = [2, 4, 6, 8, 10];
 
 
@@ -131,62 +133,43 @@
 // }
 // console.log(re(q));
 
-// class Queue{
-      
-//     constructor()
-//     {
-//         this.s1 = [];
-//         this.s2 = [];
+// 3. Implement a Queue using 2 stacks s1 and s2.
+
+// let s1 = [];
+// let s2 = [];
+
+// function enqueue(element) { // s1: 1 2 3 4 -> s2 -> 
+//   s1.push(element);
+// }
+
+// function dequeue() {
+//   if (s2.length === 0) {
+//     if (s1.length === 0) {
+//       return "Cannot dequeue because queue is empty";
 //     }
-      
-//     enQueue(x)
-//     {
-          
-    //     // Move all elements from s1 to s2 
-    //     while (this.s1.length != 0)
-    //     { 
-    //         this.s2.push(this.s1.pop()); 
-    //         //s1.pop(); 
-    //     } 
-      
-    //     // Push item into s1 
-    //     this.s1.push(x); 
-      
-    //     // Push everything back to s1 
-    //     while (this.s2.length != 0) 
-    //     { 
-    //         this.s1.push(this.s2.pop()); 
-    //         //s2.pop(); 
-    //     } 
-    // }
-      
-    // // Dequeue an item from the queue  
-    // deQueue() 
-    // {
-          
-    //     // If first stack is empty 
-    //     if (this.s1.length == 0) 
-    //     { 
-    //         document.write("Q is Empty"); 
-    //     } 
-      
-    //     // Return top of s1 
-    //     let x = this.s1[this.s1.length - 1]; 
-    //     this.s1.pop(); 
-    //     return x; 
-    // }
-    // }
-      
-    // // Driver code
-    // let q = new Queue(); 
-    // q.enQueue(1); 
-    // q.enQueue(2); 
-    // q.enQueue(3); 
-    // console.log(q); 
-    // document.write(q.deQueue() + "<br>"); 
-    // document.write(q.deQueue() + "<br>");
-    // document.write(q.deQueue() + "<br>");
- 
+//     while (s1.length > 0) {
+//       s2.push(s1.pop()); // s2: 4 3 2 1 
+//     }
+//   }
+
+//   let deqEle = s2.pop(); // deEle = 1
+//   while (s2.length > 0) {
+//     let p = s2.pop();
+//     s1.push(p); // s1 : 2 3 4 
+//   }
+//   return deqEle;
+// }
+
+// enqueue("a");
+// enqueue("b");
+// enqueue("c");
+// enqueue("d");
+// enqueue("e");
+
+// console.log(`Queue using 2 stacks s1 and s2: ${s1}`);
+// console.log(`Dequeuing Element: ${dequeue()}`);
+// // dequeue();
+// console.log(`Queue using 2 stacks s1 and s2: ${s1}`);
 
 
     // -----------------------------------------------//
